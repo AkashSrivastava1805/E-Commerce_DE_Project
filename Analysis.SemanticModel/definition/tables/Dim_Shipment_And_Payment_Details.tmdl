@@ -1,0 +1,120 @@
+table Dim_Shipment_And_Payment_Details
+	lineageTag: 6a7db05c-dfd8-4e8d-a614-91e7bf9241a6
+	sourceLineageTag: [final_tables].[Dim_Shipment_And_Payment_Details]
+
+	column customer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2d2e8c84-b155-4df5-8d31-f2abb7e7472f
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e552623d-d85d-44d9-b320-86848a2e5c6f
+		sourceLineageTag: order_id
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_type
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fdf8bdbc-b800-47fe-bc67-2c4588cf5ce3
+		sourceLineageTag: payment_type
+		summarizeBy: none
+		sourceColumn: payment_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column payment_value
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 91000cf6-41a5-4e6b-95a7-18f8de56cf44
+		sourceLineageTag: payment_value
+		summarizeBy: sum
+		sourceColumn: payment_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_status
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 206f269f-d5dc-48fc-beb1-76bf061c6eaa
+		sourceLineageTag: order_status
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_purchase_timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 6f7dd941-6693-4691-bd17-c30271e40575
+		sourceLineageTag: order_purchase_timestamp
+		summarizeBy: none
+		sourceColumn: order_purchase_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_approved_at
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: c4a85666-51cf-4717-ae39-a97b518d4234
+		sourceLineageTag: order_approved_at
+		summarizeBy: none
+		sourceColumn: order_approved_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_carrier_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 00ce42d8-c44d-42f8-a55b-41450a947b6b
+		sourceLineageTag: order_delivered_carrier_date
+		summarizeBy: none
+		sourceColumn: order_delivered_carrier_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_customer_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 07e7ac8f-1ed0-47dd-aeb4-3d58988cd1be
+		sourceLineageTag: order_delivered_customer_date
+		summarizeBy: none
+		sourceColumn: order_delivered_customer_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_estimated_delivery_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 7394b22d-7282-44b6-9d6a-502d371ce436
+		sourceLineageTag: order_estimated_delivery_date
+		summarizeBy: none
+		sourceColumn: order_estimated_delivery_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Shipment_And_Payment_Details = entity
+		mode: directLake
+		source
+			entityName: Dim_Shipment_And_Payment_Details
+			schemaName: final_tables
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,112 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "TransformDataflow",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "raw_tables olist_customers_dataset": {
+      "queryId": "b53ba1a1-a5b5-4a0d-a93a-9558914a301f",
+      "queryName": "raw_tables olist_customers_dataset"
+    },
+    "raw_tables olist_geolocation_dataset": {
+      "queryId": "c854dd48-523e-4f15-b0bf-4650f98eb301",
+      "queryName": "raw_tables olist_geolocation_dataset"
+    },
+    "raw_tables olist_order_items_dataset": {
+      "queryId": "b00e0103-0586-4306-adec-6d54fab89019",
+      "queryName": "raw_tables olist_order_items_dataset"
+    },
+    "raw_tables olist_order_payments_dataset": {
+      "queryId": "debd27fc-17c2-499f-b418-7138907af920",
+      "queryName": "raw_tables olist_order_payments_dataset"
+    },
+    "raw_tables olist_order_reviews_dataset": {
+      "queryId": "bb6f8126-e1ad-4d19-a2db-0011682bff72",
+      "queryName": "raw_tables olist_order_reviews_dataset"
+    },
+    "raw_tables olist_orders_dataset": {
+      "queryId": "592f3c0d-df0f-44d9-8f06-38b04152d1c2",
+      "queryName": "raw_tables olist_orders_dataset"
+    },
+    "raw_tables olist_products_dataset": {
+      "queryId": "215352e9-c568-4ef3-afd1-edaf50e54ce7",
+      "queryName": "raw_tables olist_products_dataset"
+    },
+    "raw_tables olist_sellers_dataset": {
+      "queryId": "d3bbb42b-a159-4962-be29-787e62de9d4b",
+      "queryName": "raw_tables olist_sellers_dataset"
+    },
+    "Merge": {
+      "queryId": "e84797c4-9ad8-443e-9024-6650a1da34a3",
+      "queryName": "Merge"
+    },
+    "Merge (2)": {
+      "queryId": "44aeec6b-c01c-4849-a5ca-5ba199f79dc6",
+      "queryName": "Merge (2)"
+    },
+    "Merge (3)": {
+      "queryId": "a34882cf-a551-4bb8-b595-15577efb00f8",
+      "queryName": "Merge (3)"
+    },
+    "Final_Customer_And_seller_Table": {
+      "queryId": "64b5647d-7c6e-48df-9855-6114ca1db7ce",
+      "queryName": "Final_Customer_And_seller_Table",
+      "loadEnabled": false
+    },
+    "Shipment_And_Payment_Details": {
+      "queryId": "7e4f8a9d-2876-4316-a1c3-dfa1a1058d0e",
+      "queryName": "Shipment_And_Payment_Details",
+      "loadEnabled": false
+    },
+    "Final_Customer_And_seller_Table_DataDestination": {
+      "queryId": "4943811a-3e3c-4524-93da-31da8c494e22",
+      "queryName": "Final_Customer_And_seller_Table_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Shipment_And_Payment_Details_DataDestination": {
+      "queryId": "42a52739-0f33-4d72-9e46-3b93261dc1b1",
+      "queryName": "Shipment_And_Payment_Details_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "NavigationQuery": {
+      "queryId": "45a2d80d-22f4-467c-8009-a27da5cbc624",
+      "queryName": "NavigationQuery",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "DefaultDestination": {
+      "queryId": "490be93a-2c19-48e6-9a25-9e0d239c0dcd",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Fact_Table": {
+      "queryId": "1dafb664-788e-4491-9614-b962cd38ab0f",
+      "queryName": "Fact_Table",
+      "loadEnabled": false
+    },
+    "Fact_Table_DataDestination": {
+      "queryId": "f5bdf481-e59e-4ba9-a36e-4b16ab7f3eeb",
+      "queryName": "Fact_Table_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"ec4d62a1-a1b6-43de-8e13-db53408e2691\",\"DatasourceId\":\"81681122-8b8d-43cd-b898-9a96b88749a9\"}"
+    },
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"ec4d62a1-a1b6-43de-8e13-db53408e2691\",\"DatasourceId\":\"7f5fac5d-0e0d-44b5-85c5-9dc2f942fcc9\"}"
+    }
+  ]
+}

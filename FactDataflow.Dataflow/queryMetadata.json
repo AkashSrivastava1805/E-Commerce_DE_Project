@@ -1,0 +1,61 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "FactDataflow",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Transformed_Tables Final_Customer_And_seller_Table": {
+      "queryId": "aca5b019-e828-4038-8b75-90533cfddf69",
+      "queryName": "Transformed_Tables Final_Customer_And_seller_Table",
+      "loadEnabled": false
+    },
+    "final_tables raw_tables olist_order_reviews_dataset": {
+      "queryId": "f600ce33-f17f-4cbb-8725-6ba60540f1ea",
+      "queryName": "final_tables raw_tables olist_order_reviews_dataset"
+    },
+    "Fact_Table": {
+      "queryId": "5066d54e-bc56-482e-bcd4-547200df94fd",
+      "queryName": "Fact_Table",
+      "loadEnabled": false
+    },
+    "Transformed_Tables Shipment_And_Payment_Details": {
+      "queryId": "fb321b73-f8f9-4043-b8d8-68970163b342",
+      "queryName": "Transformed_Tables Shipment_And_Payment_Details",
+      "loadEnabled": false
+    },
+    "Transformed_Tables Shipment_And_Payment_Details_DataDestination": {
+      "queryId": "26f50b14-7dc1-4f76-b9ba-962c723ef55f",
+      "queryName": "Transformed_Tables Shipment_And_Payment_Details_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Transformed_Tables Final_Customer_And_seller_Table_DataDestination": {
+      "queryId": "cda84251-4471-44d5-9c19-a4faac1e455c",
+      "queryName": "Transformed_Tables Final_Customer_And_seller_Table_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Fact_Table_DataDestination": {
+      "queryId": "df615467-74de-4915-9de5-9537035463eb",
+      "queryName": "Fact_Table_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"ec4d62a1-a1b6-43de-8e13-db53408e2691\",\"DatasourceId\":\"81681122-8b8d-43cd-b898-9a96b88749a9\"}"
+    },
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"ec4d62a1-a1b6-43de-8e13-db53408e2691\",\"DatasourceId\":\"7f5fac5d-0e0d-44b5-85c5-9dc2f942fcc9\"}"
+    }
+  ],
+  "fastCombine": true
+}

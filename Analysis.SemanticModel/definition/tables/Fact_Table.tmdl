@@ -1,0 +1,159 @@
+table Fact_Table
+	lineageTag: 47ec3b6b-23cd-43bd-8696-c0f7bed2ca75
+	sourceLineageTag: [final_tables].[Fact_Table]
+
+	column customer_unique_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7ba8758a-8c47-49da-9eff-df9befe35583
+		sourceLineageTag: customer_unique_id
+		summarizeBy: none
+		sourceColumn: customer_unique_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8134ca73-0301-4709-b23e-a6cbbc6e4827
+		sourceLineageTag: customer_id
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_zip_code_prefix
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f373cffa-a006-42a5-9c81-f6d9f33c6df6
+		sourceLineageTag: customer_zip_code_prefix
+		summarizeBy: sum
+		sourceColumn: customer_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 313feddb-569c-4436-a5fb-efe6424b7e56
+		sourceLineageTag: product_id
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 32dafb3c-cb1c-4bb4-b0d1-28a8bc97b998
+		sourceLineageTag: price
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column order_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 73c63c99-1071-414e-b632-2e486f6ac9fe
+		sourceLineageTag: order_id
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_purchase_timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 66b53471-fe99-47dc-9cb2-450c4308652a
+		sourceLineageTag: order_purchase_timestamp
+		summarizeBy: none
+		sourceColumn: order_purchase_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_delivered_customer_date
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 9088584e-656c-4212-9d07-68f1f19f303f
+		sourceLineageTag: order_delivered_customer_date
+		summarizeBy: none
+		sourceColumn: order_delivered_customer_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5f9f64a3-7d63-48d2-8b6f-ce690698b94a
+		sourceLineageTag: seller_id
+		summarizeBy: none
+		sourceColumn: seller_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_zip_code_prefix
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3d364ebb-056e-4d45-8982-4458570b40e6
+		sourceLineageTag: seller_zip_code_prefix
+		summarizeBy: sum
+		sourceColumn: seller_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_id
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8a1bfeab-33db-4af7-9846-d0d5f5962b58
+		sourceLineageTag: review_id
+		summarizeBy: none
+		sourceColumn: review_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_score
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 15280d41-10f8-4eff-8cef-b263ba77d229
+		sourceLineageTag: review_score
+		summarizeBy: none
+		sourceColumn: review_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_creation_date
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fc5e3b3e-5e16-47a6-a6dc-69d1f1e5f39d
+		sourceLineageTag: review_creation_date
+		summarizeBy: none
+		sourceColumn: review_creation_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_answer_timestamp
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a021ee4f-31ac-425a-ac01-ea0545bf24c3
+		sourceLineageTag: review_answer_timestamp
+		summarizeBy: none
+		sourceColumn: review_answer_timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Table = entity
+		mode: directLake
+		source
+			entityName: Fact_Table
+			schemaName: final_tables
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
